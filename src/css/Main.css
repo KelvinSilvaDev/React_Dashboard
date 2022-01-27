@@ -5,6 +5,10 @@ main {
     width: calc(100% - 220px);
 }
 
+.Left {
+    float: left;
+}
+
 main .main-content {
     padding: 30px;
     width: 100%;
@@ -111,6 +115,8 @@ div.main-content-title h2 {
 
 div.dashboard-content {
     padding: 10px 0;
+    overflow-y: auto;
+    
 }
 
 .dashboard-flex-parent {
@@ -123,10 +129,12 @@ div.dashboard-content {
 .dashboard-box {
     width: 100%;
     max-width: 320px;
-    padding-top: 15%;
+    padding-top: 15px;
     position: relative;
     margin: 0 10px;
     padding-bottom: 20px;
+    max-height: 134px;
+    min-height: 134px;
 }
 
 .dashboard-box-wrapper {
@@ -140,16 +148,19 @@ div.dashboard-content {
     align-items: center;
     justify-content: center;
     background-color: #00a2ff4d;
+    border-radius: 10px;
+    max-height: 134px !important;
 }
 
 .dashboard-box:hover {
     transition: 0.5s;
     box-shadow: 0 0 1rem rgba(156, 156, 156, 0.4);
     transform: scale(1.05);
+    max-height: 134px !important;
 }
 
 div.box-icon {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 55px;
     height: 55px;
     border-radius: 100%;
@@ -172,7 +183,48 @@ div.value {
 div.type {
     margin-top: 15px;
     font-size: 14px;
+    margin-bottom: 10px;
 }
+
+
+.overView{
+    width: 94%;
+    padding: 45px;
+    padding-top: 0;
+    border: 1px solid #ccc;
+    margin: 15px 50px;
+    border-radius: 20px;
+    height: 580px;
+    padding-right: 0px;
+    padding-bottom: 0;
+
+}
+div.overView Left, h3 {
+    text-align: left;
+    padding-left: 15px;
+}
+div.overView Left, span {
+    text-align: left;
+    padding-left: 15px;
+}
+.brandWrapper{
+    padding-top: 30px;
+    width: 100%;
+}
+.dataDashboardWrapper {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-top: 0;
+    height: 100%;
+}
+.graph {
+    float: left;
+}
+
+
 
 @media screen and (max-width: 1600px) {
     .dashboard-box {

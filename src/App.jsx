@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <div className="flex-dashboard">
         <Sidebar />
+        
         <Main />
       </div>
     </div>
