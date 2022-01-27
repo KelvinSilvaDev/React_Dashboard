@@ -4,6 +4,7 @@ import Sidebar from './Sidebar'
 import Main from './Main'
 import './css/Reset.css'
 import  './css/Style.css'
+import './css/fonts.css'
 
 function App() {
   return (
