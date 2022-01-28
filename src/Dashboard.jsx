@@ -3,10 +3,14 @@ import './css/Dashboard.css';
 import RenderLineChart from "./Graph";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
+import Header from "./Header";
+
 
 class Dashboard extends Component {
     render(){
         return (
+        <div>
+            <Header />
             <div class="dashboard-content">
                     <div class="dashboard-flex-parent">
                         <div class="dashboard-box">
@@ -123,6 +127,7 @@ class Dashboard extends Component {
                         <div className="card2"></div>
                     </div>
             </div>
+        </div>
         );
     }
 }
