@@ -31,7 +31,7 @@ class Sidebar extends Component {
                         <ul>
                             <li className="selected">
                             <FontAwesomeIcon icon={faChartPie} />
-                                <Link to ="/Dashboard">Dashboard</Link>
+                                <Link to ="/">Dashboard</Link>
                             </li>
                             <li>
                             <FontAwesomeIcon icon={faUser} />
@@ -75,7 +75,7 @@ class Sidebar extends Component {
                     </div>
                 </sidebar>
                 <Switch>
-                    <Route path="/Dashboard" exact component={Dashboard} />
+                    <Route path="/" exact component={Dashboard} />
                     <Route path="/Pessoal" exact component={Pessoal} />
                 </Switch>
             </Router>
