@@ -6,7 +6,7 @@ import Modal from './Modal.js';
 
 
 
-function cadastraCliente() {}
+// function cadastraCliente() {}
 
 class Clientes extends Component {
   constructor() {

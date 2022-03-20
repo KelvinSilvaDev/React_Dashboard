@@ -1,8 +1,8 @@
 import "./App.css";
-import React, {Component} from 'react';
+import React from 'react';
 import Sidebar from './Sidebar'
-import Main from './Main'
-import Header from "./Header";
+// import Main from './Main {Component}'
+// import Header from "./Header";
 import './css/Reset.css'
 import  './css/Style.css'
 import './css/fonts.css'
