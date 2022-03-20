@@ -8,7 +8,7 @@ import img from "./img/userProfilePhoto.jpg"
 class Header extends Component {
     render () {
         return (
-            <div>
+            <div className='header_wrapper'>
                 <header>
                 <div className='Left'>
                     <h2>Visão Geral</h2>
@@ -27,7 +27,7 @@ class Header extends Component {
                 </div>
                 </header>
                 <div className="main-content-title">
-                    <h2>SectionName</h2>
+                    <h2 id='SectionName'>{this.props.tela}</h2>
                 </div>
             </div>
             

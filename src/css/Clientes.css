@@ -1,0 +1,46 @@
+.clientes_wrapp {
+    background-color: #fff;
+    width: 92%;
+    height: calc(100% - 164px);
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    box-shadow: 0px 0px 45px #bbb;
+    border-radius: 30px 30px 0 0px ;
+}
+
+.clienteType{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.controlsCliente{
+    float: right;
+    margin-right: 25px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.controlsCliente h6 {
+    margin: 0;
+    margin-right: 20px;
+}
+
+
+.controlsCliente button {
+    border: none;
+    padding: 10px;
+}
+
+.controlsCliente button:hover {
+    background-color: #000;
+    color: #fff;
+}

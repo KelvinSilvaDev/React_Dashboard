@@ -55,3 +55,14 @@
     border-bottom: 1px solid #DFE0EB;
     margin-top: 25px;
 }
+
+
+
+.nameWRPR {
+    width: 50%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}

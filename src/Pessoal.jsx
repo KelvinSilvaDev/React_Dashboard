@@ -13,7 +13,7 @@ class Pessoal extends Component {
     render(){
         return (
             <div className="contornoPessoal">
-                <Header />
+                <Header tela="Perfil" />
                 <div className="perfil-parent">
                     <div className="perfil">
                         <div className="perfil-img">

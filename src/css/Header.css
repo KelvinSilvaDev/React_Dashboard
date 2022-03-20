@@ -1,3 +1,8 @@
+.header_wrapper{
+    display: block;
+    width: 100%;
+}
+
 .Left {
     float: left;
 }
