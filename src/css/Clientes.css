@@ -44,3 +44,14 @@
     background-color: #000;
     color: #fff;
 }
+
+.tg-0lax{
+    border: none !important;
+    font-family: 'Montserrat' !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+}
+
+.tg > tbody > tr:hover {
+    background: #00000030;
+}

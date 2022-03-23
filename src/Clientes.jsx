@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import Header from "./Header";
 import "./css/Clientes.css";
 import ClientesLista from "./ClientesLista";
-import Modal from './Modal.js';
-
-
+import Modal from "./Modal.js";
+import FormCadastraCliente from "./FormCadastraCliente";
 
 // function cadastraCliente() {}
 
@@ -13,16 +12,28 @@ class Clientes extends Component {
     super();
     this.state = {
       show: false,
+      clientes: [],
     };
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
   }
 
   showModal = () => {
-      this.setState({ show: true });
-  }
+    this.setState({ show: true });
+  };
   hideModal = () => {
-      this.setState({ show: false });
+    this.setState({ show: false });
+  };
+
+  criarCliente(empresa, responsavel, localizacao, telefone, email) {
+    // console.log(`Nova Nota Criada: ${titulo} ${texto}`)
+    const novoCliente = { empresa, responsavel, localizacao, telefone, email };
+    const novoArrayClientes = [...this.state.clientes, novoCliente];
+    const novoEstado = {
+      clientes: novoArrayClientes,
+    };
+    // console.log(this.notas.length)
+    this.setState(novoEstado);
   }
 
   render() {
@@ -30,48 +41,7 @@ class Clientes extends Component {
       <div className="all_wrapper">
         <Header tela="Clientes" />
         <Modal show={this.state.show} handleClose={this.hideModal}>
-          <form id="formModal" action="">
-              <label htmlFor="empresa">Empresa</label>
-              <input type="text" name="empresa" id="Empresa" />
-              <label htmlFor="responsavel">Responsável</label>
-              <input type="text" name="responsavel" id="Responsavel" />
-              <label htmlFor="Estado">Localização</label>
-              <select name="Estado" id="sEstado">
-                  <option selected value="Localização">Estado</option>
-                  <option value="AC">AC</option>
-                  <option value="AL">AL</option>
-                  <option value="AP">AP</option>
-                  <option value="AM">AM</option>
-                  <option value="BA">BA</option>
-                  <option value="CE">CE</option>
-                  <option value="ES">ES</option>
-                  <option value="GO">GO</option>
-                  <option value="MA">MA</option>
-                  <option value="MT">MT</option>
-                  <option value="MS">MS</option>
-                  <option value="MG">MG</option>
-                  <option value="PA">PA</option>
-                  <option value="PB">PB</option>
-                  <option value="PR">PR</option>
-                  <option value="PE">PE</option>
-                  <option value="PI">PI</option>
-                  <option value="RJ">RJ</option>
-                  <option value="RN">RN</option>
-                  <option value="RS">RS</option>
-                  <option value="RO">RO</option>
-                  <option value="RR">RR</option>
-                  <option value="SC">SC</option>
-                  <option value="SP">SP</option>
-                  <option value="SE">SE</option>
-                  <option value="TO">TO</option>
-                  <option value="DF">DF</option>
-              </select>
-              <label htmlFor="telefone">Tel.:</label>
-              <input type="tel" name="telefone" id="Telefone" />
-              <label htmlFor="email">E-mail</label>
-              <input type="email" name="email" id="Email" />
-              <button id="cadastraCliente" type="submit">Cadastrar</button>
-          </form>
+          <FormCadastraCliente criarCliente={this.criarCliente.bind(this)} />
         </Modal>
         <div className="clientes_wrapp">
           <h2 className="clienteType">Empresas</h2>
@@ -79,7 +49,27 @@ class Clientes extends Component {
             <h6>Filtro</h6>
             <button onClick={this.showModal}>+ Add Cliente</button>
           </div>
-          <ClientesLista />
+          <table className="tg">
+            <thead>
+              <tr>
+                <th className="tg-9wq8">
+                  {" "}
+                  <input type="checkbox" name="selectAll" id="selectAll" />{" "}
+                </th>
+                <th className="tg-nrix">REG</th>
+                <th className="tg-nrix">Empresa</th>
+                <th className="tg-nrix">Responsável</th>
+                <th className="tg-nrix">Localização</th>
+                <th className="tg-nrix">Telefone</th>
+                <th className="tg-nrix">E-mail</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <ClientesLista clientes={this.state.clientes} />
+              
+            </tbody>
+          </table>
         </div>
       </div>
     );
